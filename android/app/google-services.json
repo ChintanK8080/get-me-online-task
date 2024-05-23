@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475639289162",
+    "project_id": "getme-online-task",
+    "storage_bucket": "getme-online-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475639289162:android:7318e5291158578b035db3",
+        "android_client_info": {
+          "package_name": "com.example.getme_online_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh-tBotWXxDPlGCEKqZqUwA5Fkqw-Ep_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
