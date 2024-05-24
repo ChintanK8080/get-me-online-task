@@ -15,68 +15,71 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          height: MediaQuery.of(context).size.height * 0.45,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(AppAssets.header), fit: BoxFit.cover)),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                AppStrings.popular,
-                style: AppTextStyle.sectionTitle,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const PopularListPage(),
-                    ),
-                  );
-                },
-                child:  Text(
-                  AppStrings.seeAll,
-                  style: AppTextStyle.sectionOptions,
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.width * 0.45,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(AppAssets.header), fit: BoxFit.cover)),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  AppStrings.popular,
+                  style: AppTextStyle.sectionTitle,
                 ),
-              )
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 165,
-          child: ListView.separated(
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.only(left: 15),
-            itemBuilder: (context, index) => const HorizontalTile(),
-            separatorBuilder: (context, index) => const SizedBox(
-              width: 10,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const PopularListPage(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    AppStrings.seeAll,
+                    style: AppTextStyle.sectionOptions,
+                  ),
+                )
+              ],
             ),
           ),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        SizedBox(
-          height: 165,
-          child: ListView.separated(
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.only(left: 15),
-            itemBuilder: (context, index) => const HorizontalTile(),
-            separatorBuilder: (context, index) => const SizedBox(
-              width: 10,
+          SizedBox(
+            height: 165,
+            child: ListView.separated(
+              itemCount: 5,
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.only(left: 15),
+              itemBuilder: (context, index) => const HorizontalTile(),
+              separatorBuilder: (context, index) => const SizedBox(
+                width: 10,
+              ),
             ),
           ),
-        )
-      ],
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            height: 165,
+            child: ListView.separated(
+              itemCount: 5,
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.only(left: 15),
+              itemBuilder: (context, index) => const HorizontalTile(),
+              separatorBuilder: (context, index) => const SizedBox(
+                width: 10,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
