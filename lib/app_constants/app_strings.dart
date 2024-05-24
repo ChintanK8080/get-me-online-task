@@ -9,5 +9,6 @@ class AppStrings {
   static const stats = "Stats";
   static const lastWeek = "Last week";
   static const sessions = "Sessions";
+  static const noInternetConnection = "No Internet Connection";
   static const description = "Turn down the stress\n volume";
 }
