@@ -32,6 +32,10 @@ class _HomePageState extends State<HomePage>
     super.initState();
   }
 
+  jumpToPage(int value) {
+    tabController?.animateTo(value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,11 +44,13 @@ class _HomePageState extends State<HomePage>
         width: MediaQuery.of(context).size.width,
         child: TabBarView(
           controller: tabController,
-          children: const [
-            HomeTab(),
-            PracticesTab(),
-            SizedBox(),
-            ProfileTab(),
+          children: [
+            const HomeTab(),
+            PracticesTab(onBackClick: () {
+              jumpToPage(0);
+            }),
+            const SizedBox(),
+            const ProfileTab(),
           ],
         ),
       ),

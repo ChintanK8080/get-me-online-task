@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getme_online_task/app_constants/app_assets.dart';
+import 'package:getme_online_task/app_constants/app_colors.dart';
 import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 import 'package:getme_online_task/views/screens/popular_list_tab.dart';
@@ -19,12 +20,23 @@ class _HomeTabState extends State<HomeTab> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.width * 0.45,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(AppAssets.header), fit: BoxFit.cover)),
+          Stack(
+            children: [
+              Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 290,
+                  color: AppColors.purpleDark),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 300,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.header),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),

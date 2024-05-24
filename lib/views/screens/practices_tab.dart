@@ -7,7 +7,8 @@ import 'package:getme_online_task/views/widgets/custom_card_view.dart';
 import 'package:getme_online_task/views/widgets/vertical_list_tile.dart';
 
 class PracticesTab extends StatefulWidget {
-  const PracticesTab({super.key});
+  const PracticesTab({super.key, required this.onBackClick});
+  final Function() onBackClick;
 
   @override
   State<PracticesTab> createState() => _PracticesTabState();
@@ -17,7 +18,11 @@ class _PracticesTabState extends State<PracticesTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(title: AppStrings.practices, context: context),
+      appBar: customAppBar(
+        title: AppStrings.practices,
+        context: context,
+        onBack: widget.onBackClick,
+      ),
       body: Column(children: [
         SizedBox(
           height: 210,
