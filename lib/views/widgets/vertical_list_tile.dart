@@ -4,8 +4,14 @@ import 'package:getme_online_task/app_constants/app_assets.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 
 class VerticalListTile extends StatelessWidget {
-  const VerticalListTile({super.key, required this.onClick});
+  const VerticalListTile(
+      {super.key,
+      required this.onClick,
+      required this.audioName,
+      required this.audioDuration});
   final Function() onClick;
+  final String audioName;
+  final String audioDuration;
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +38,18 @@ class VerticalListTile extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
-                  "The Cure for Boredom",
+                  audioName,
                   style: AppTextStyle.tileSubTitle,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
-                Text("7 min 11 sec"),
+                Text(audioDuration),
               ],
             ),
             const Spacer(),

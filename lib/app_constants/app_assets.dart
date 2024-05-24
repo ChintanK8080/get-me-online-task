@@ -16,4 +16,5 @@ class AppAssets {
       "assets/images/png/music_player_background.png";
   static const verticalTileBackground =
       "assets/images/png/vertical_tile_background.png";
+     static const tempAudio= 'audio/dummy_audio.mp3';
 }

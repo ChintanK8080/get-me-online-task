@@ -42,6 +42,7 @@ class _MusicPlayerPageState extends State<MusicPlayerPage> {
             _position = value;
           }),
         );
+    _playerState = PlayerState.paused;
     _initStreams();
   }
 

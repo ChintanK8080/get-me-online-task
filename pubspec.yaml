@@ -16,6 +16,8 @@ dependencies:
   flutter_svg: ^2.0.5
   audioplayers: ^4.1.0
   file_picker: ^4.0.0
+  cloud_firestore: ^4.14.0
+  connectivity_plus: ^5.0.2
 
 dev_dependencies:
   flutter_test:

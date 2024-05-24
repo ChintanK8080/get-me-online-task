@@ -48,6 +48,8 @@ class _PracticesTabState extends State<PracticesTab> {
             shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index) => VerticalListTile(
+              audioDuration: "The Cure for Boredom",
+              audioName: "7 min 11 sec",
               onClick: () {},
             ),
             separatorBuilder: (context, index) => const Padding(
