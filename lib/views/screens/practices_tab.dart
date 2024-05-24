@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getme_online_task/app_constants/app_colors.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 import 'package:getme_online_task/views/widgets/custom_appbar.dart';
 import 'package:getme_online_task/views/widgets/custom_card_view.dart';
@@ -16,7 +17,7 @@ class _PracticesTabState extends State<PracticesTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(title: "Practices", context: context),
+      appBar: customAppBar(title: AppStrings.practices, context: context),
       body: Column(children: [
         SizedBox(
           height: 210,
@@ -38,7 +39,7 @@ class _PracticesTabState extends State<PracticesTab> {
           child: Padding(
             padding: EdgeInsets.all(15),
             child: Text(
-              "All Practices",
+              AppStrings.allPractices,
               style: AppTextStyle.sectionTitle,
             ),
           ),

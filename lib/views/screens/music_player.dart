@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getme_online_task/app_constants/app_assets.dart';
 import 'package:getme_online_task/app_constants/app_colors.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 import 'package:getme_online_task/views/widgets/custom_appbar.dart';
 
@@ -67,7 +68,7 @@ class _MusicPlayerPageState extends State<MusicPlayerPage> {
     return Scaffold(
       appBar: customAppBar(
           context: context,
-          title: "Mental Training",
+          title: AppStrings.mentalTraining,
           color: AppColors.white,
           backgroundColor: AppColors.purpleDark),
       body: Container(

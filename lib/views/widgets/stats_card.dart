@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:getme_online_task/app_constants/app_colors.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 
 enum Week { Mon, Tue, Wed, Thu, Fri, Sat, Sun }
@@ -21,13 +22,13 @@ class StatsCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  "Stats",
+                  AppStrings.stats,
                   style: AppTextStyle.sectionTitle,
                 ),
                 Row(
                   children: [
                     Text(
-                      "Last week",
+                      AppStrings.lastWeek,
                       style: AppTextStyle.subHeading2
                           .copyWith(color: AppColors.black),
                     ),
@@ -57,7 +58,7 @@ class StatsCard extends StatelessWidget {
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          "Sessions",
+                          AppStrings.sessions,
                           style: AppTextStyle.subHeading.copyWith(
                             color: AppColors.black.withOpacity(0.4),
                           ),
@@ -77,7 +78,7 @@ class StatsCard extends StatelessWidget {
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          "Meditations",
+                          AppStrings.meditations,
                           style: AppTextStyle.subHeading.copyWith(
                             color: AppColors.black.withOpacity(0.4),
                           ),

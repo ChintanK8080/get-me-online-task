@@ -20,16 +20,6 @@ class _PopularListPageState extends State<PopularListPage> {
   List<AudioData> audioDataList = [];
   bool isLoading = false;
 
-  Future<void> initializePlayer() async {
-    player.setReleaseMode(ReleaseMode.stop);
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) async {
-        await player.setSource(AssetSource('dummy_music.mp3'));
-        await player.resume();
-      },
-    );
-  }
-
   @override
   void dispose() {
     player.dispose();

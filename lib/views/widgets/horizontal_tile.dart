@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getme_online_task/app_constants/app_assets.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 
 import '../../app_constants/app_text_styles.dart';
 
@@ -22,7 +23,7 @@ class HorizontalTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Text(
-                "Anxiety",
+                AppStrings.anxiety,
                 style: AppTextStyle.heading,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
@@ -31,7 +32,7 @@ class HorizontalTile extends StatelessWidget {
                 height: 12,
               ),
               Text(
-                "Turn down the stress\n volume",
+                AppStrings.description,
                 style: AppTextStyle.subHeading,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,

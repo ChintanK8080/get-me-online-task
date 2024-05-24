@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:getme_online_task/app_constants/app_assets.dart';
 import 'package:getme_online_task/app_constants/app_colors.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 import 'package:getme_online_task/views/widgets/profile_card.dart';
 import 'package:getme_online_task/views/widgets/stats_card.dart';
@@ -51,7 +52,7 @@ class ProfileTab extends StatelessWidget {
           const ProfileCard(
             session: '13',
             time: '04:23:04',
-            title: "Practicies",
+            title: AppStrings.practices,
             imagePath: AppAssets.book,
             imageBackgroundColor: AppColors.purpleDark,
           ),
@@ -59,7 +60,7 @@ class ProfileTab extends StatelessWidget {
           const ProfileCard(
             session: '06',
             time: '00:55:04',
-            title: "Meditations",
+            title: AppStrings.meditations,
             imageBackgroundColor: AppColors.pink,
             imagePath: AppAssets.book,
           ),

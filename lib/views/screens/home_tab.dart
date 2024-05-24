@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getme_online_task/app_constants/app_assets.dart';
+import 'package:getme_online_task/app_constants/app_strings.dart';
 import 'package:getme_online_task/app_constants/app_text_styles.dart';
 import 'package:getme_online_task/views/screens/popular_list_tab.dart';
 import 'package:getme_online_task/views/widgets/horizontal_tile.dart';
@@ -19,7 +20,7 @@ class _HomeTabState extends State<HomeTab> {
       children: [
         Container(
           height: MediaQuery.of(context).size.height * 0.45,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(AppAssets.header), fit: BoxFit.cover)),
         ),
@@ -28,20 +29,20 @@ class _HomeTabState extends State<HomeTab> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Popular",
+              const Text(
+                AppStrings.popular,
                 style: AppTextStyle.sectionTitle,
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PopularListPage(),
+                      builder: (context) => const PopularListPage(),
                     ),
                   );
                 },
-                child: Text(
-                  "See All",
+                child:  Text(
+                  AppStrings.seeAll,
                   style: AppTextStyle.sectionOptions,
                 ),
               )
@@ -54,7 +55,7 @@ class _HomeTabState extends State<HomeTab> {
             itemCount: 5,
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 15),
-            itemBuilder: (context, index) => HorizontalTile(),
+            itemBuilder: (context, index) => const HorizontalTile(),
             separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),
@@ -69,7 +70,7 @@ class _HomeTabState extends State<HomeTab> {
             itemCount: 5,
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 15),
-            itemBuilder: (context, index) => HorizontalTile(),
+            itemBuilder: (context, index) => const HorizontalTile(),
             separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),
