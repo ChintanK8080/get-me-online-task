@@ -5,6 +5,8 @@ import 'package:getme_online_task/app_constants/app_colors.dart';
 import 'package:getme_online_task/views/screens/home_tab.dart';
 import 'package:getme_online_task/views/screens/practices_tab.dart';
 
+import 'profile_tab.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -38,11 +40,11 @@ class _HomePageState extends State<HomePage>
         width: MediaQuery.of(context).size.width,
         child: TabBarView(
           controller: tabController,
-          children: [
+          children: const [
             HomeTab(),
             PracticesTab(),
             SizedBox(),
-            SizedBox(),
+            ProfileTab(),
           ],
         ),
       ),

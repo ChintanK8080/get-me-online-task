@@ -24,19 +24,19 @@ class _PracticesTabState extends State<PracticesTab> {
             itemCount: 5,
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 15),
-            itemBuilder: (context, index) => CustomCardView(),
+            itemBuilder: (context, index) => const CustomCardView(),
             separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
-        Align(
+        const Align(
           alignment: Alignment.centerLeft,
           child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: EdgeInsets.all(15),
             child: Text(
               "All Practices",
               style: AppTextStyle.sectionTitle,
@@ -47,8 +47,10 @@ class _PracticesTabState extends State<PracticesTab> {
           child: ListView.separated(
             shrinkWrap: true,
             itemCount: 10,
-            itemBuilder: (context, index) => VerticalListTile(),
-            separatorBuilder: (context, index) => Padding(
+            itemBuilder: (context, index) => VerticalListTile(
+              onClick: () {},
+            ),
+            separatorBuilder: (context, index) => const Padding(
               padding: EdgeInsets.only(left: 20),
               child: Divider(
                 color: AppColors.black,
